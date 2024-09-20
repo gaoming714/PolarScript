@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Upload Image</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Upload Image</h1>
+
+    <div class="input-group">
+      <label for="imageInput">Choose an image:</label>
+      <input type="file" id="imageInput" accept="image/*" />
+    </div>
+
+    <!-- 新增的下拉菜单 -->
+    <div class="input-group">
+      <label for="pictureIndex">Select position:</label>
+      <select id="pictureIndex">
+        <!-- 生成 0 到 14 的选项  -1 表示随机 -->
+        <option value="-1">random</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+      </select>
+    </div>
+
+    <button id="uploadButton" class="upload-btn">芝一下</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
