@@ -3,7 +3,7 @@
     "name": "B站封面预览插件",
     "version": "0.1",
     "description": "判断茫茫视频中是否方便找到你的视频封面，打开b站搜索某个关键词，然后打开插件上传封面",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "permissions": ["activeTab", "scripting"],
     "action": {
       "default_popup": "popup.html",
       "default_icon": "icon.png"

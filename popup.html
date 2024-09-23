@@ -2,73 +2,60 @@
 <html>
 
 <head>
-  <title>Upload Image</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.bootcdn.net/ajax/libs/bulma/1.0.1/css/bulma.min.css" rel="stylesheet">
-  <!-- <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"> -->
+  <title>Qiuzhi Script Preview Image</title>
 </head>
 
 <body>
-  <section class="hero is-medium">
-    <div class="hero-body">
-      <div class="container has-text-centered" style="display: flex; justify-content: center;">
-        <figure class="image is-128x128">
-          <img src="./hero.png" />
-        </figure>
+  <div class="container" style="min-width: 500px;">
+    <div class="row mb-2">
+      <div class="col">
+      </div>
+      <div class="col-8">
+        <img src="./hero.png" class="img-fluid" alt="...">
+      </div>
+      <div class="col">
       </div>
     </div>
-  </section>
 
-  <div class="container">
-    <div class="block">
-      <div class="fixed-grid has-4-cols">
-        <div class="grid has-text-centered">
-          <div class="cell is-small">
-              <span class="icon-text">
-                <span class="icon">
-                  <i class="fas fa-home"></i>
-                </span>
-                <span>平台</span>
-              </span>
-          </div>
-          <div class="cell is-col-span-3">
-            <button id="gotoBilibili" class="button is-primary is-light is-small">B站</button>
-            <button id="gotoXigua" class="button is-primary is-light is-small">西瓜</button>
-            <button id="gotoXiaohongshu" class="button is-primary is-light is-small">小红书</button>
-          </div>
-          <div class="cell">
-            <strong>标题</strong>.
-          </div>
-          <div class="cell is-col-span-3">
-            <input id="titleInput" class="input is-small" type="text" placeholder="Text input" />
-          </div>
+    <div class="row mb-2">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="gotoBilibili" autocomplete="off">
+        <label class="btn btn-outline-primary" for="gotoBilibili">B站</label>
+        <input type="radio" class="btn-check" name="btnradio" id="gotoXigua" autocomplete="off">
+        <label class="btn btn-outline-primary" for="gotoXigua">西瓜</label>
+        <input type="radio" class="btn-check" name="btnradio" id="gotoXiaohongshu" autocomplete="off">
+        <label class="btn btn-outline-primary" for="gotoXiaohongshu">小红书</label>
+      </div>
+    </div>
 
-          <div class="cell is-col-span-4">
-            <div id="file-js-example" class="file is-small has-name is-fullwidth">
-              <label class="file-label">
-                <input id="imageInput" class="file-input" type="file" name="resume" accept="image/*" />
-                <span class="file-cta">
-                  <span class="file-icon">
-                    <i class="fas fa-upload"></i>
-                  </span>
-                  <span class="file-label">上传封面</span>
-                </span>
-                <span class="file-name">（空）</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="cell">
-            <div class="block">替换位置</div>
-          </div>
-          <div class="cell is-col-span-3">
-            <input id="pictureIndex" class="input is-small" type="text" placeholder="默认随机 or (0-14)" />
-          </div>
-          <div class="cell is-col-span-2"><button id="uploadButton" class="button is-link is-light">芝一下</button></div>
-          <div class="cell is-col-span-2"><button id="resetButton" class="button is-danger is-light">重置</button></div>
-
-        </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupFile01">封面</label>
+      <input type="file" class="form-control" id="imageInput">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">位置</span>
+      <input type="text" class="form-control" id="pictureIndex" placeholder="随机" aria-label="Username"
+        aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">标题</span>
+      <input type="text" class="form-control" id="titleInput" placeholder="标题" aria-label="Username"
+        aria-describedby="basic-addon1">
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+      </div>
+      <div class="col-4">
+        <button type="button" class="btn btn-outline-primary" id="magicButton">芝一下</button>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-outline-danger" id="resetButton">重置</button>
+      </div>
+      <div class="col">
       </div>
     </div>
   </div>
